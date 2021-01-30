@@ -4,6 +4,7 @@ enum {
 	IDLE, WALK, HIT, EVOLVE
 }
 
+export(String, FILE) var next_phase
 export var max_speed = 300
 export var hit_speed = 50
 var acceleration_time = 0.05
@@ -13,7 +14,14 @@ var last_collision_direction = Vector2()
 
 func _ready():
 	$AnimatedSprite.play("idle")
-	pass
+	HUD.connect("write_text_finished", self, "_on_write_text_finished")
+	HUD.showTextModal('start', [
+		"....",
+		".......",
+		"...Wh-...What…",
+		"What am I ?",
+		"I ... I ... have been here before …"
+	])
 
 func _physics_process(delta):
 	var direction = Vector2()
@@ -42,7 +50,7 @@ func walk(direction,delta):
 		acceleration.x = lerp(acceleration.x, max_speed * direction.x, acceleration_time)
 		acceleration.y = lerp(acceleration.y, max_speed * direction.y, acceleration_time)
 				
-		var collision = move_and_collide(acceleration * delta)
+		var collision = move_and_collide(acceleration * GAME.game_time * delta)
 		if (direction.x !=0 || direction.y != 0) && collision:
 			acceleration = Vector2()
 			last_collision_direction = collision.normal
@@ -64,10 +72,27 @@ func animations():
 	elif status == IDLE :
 		$AnimatedSprite.play("idle")
 
-
 func _on_CollectorArea2D_area_entered(area):
 	if area.is_in_group("MemoryItem") :
 		area.queue_free()
 		$AnimatedSprite.play("evolve")
 		$AnimationLightMask.play("finish")
 		status = EVOLVE
+		HUD.showTextModal('finish', [
+			"I...I...Remember!!!",
+			"I Am a person!!!",
+			"This is my Childhood!!",
+			"I need to go deeper…"
+		])
+		
+func _on_write_text_finished(title):
+	if title == 'finish':
+		GAME.changeScenne(next_phase)
+
+
+func _on_TimerMidleText_timeout():
+	HUD.showTextModal('midle', [
+		"This place... is Familiar…",
+		"I have to get out here",
+		"I need to find my way…"
+	])

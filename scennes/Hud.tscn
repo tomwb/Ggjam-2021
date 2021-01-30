@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/textModal.png" type="Texture" id=1]
+[ext_resource path="res://fonts/Kenney Pixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/Hud.gd" type="Script" id=3]
+[ext_resource path="res://samples/typing.wav" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="TextModal" type="NinePatchRect" parent="."]
+anchor_left = 0.256
+anchor_top = 0.8
+anchor_right = 0.744
+anchor_bottom = 0.955
+margin_left = -0.144012
+margin_top = 3.05176e-05
+margin_right = 0.143982
+margin_bottom = 7.00006
+texture = ExtResource( 1 )
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextModal"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 11.0
+margin_right = -10.0
+margin_bottom = -10.0
+custom_fonts/font = SubResource( 1 )
+text = "lorem ipsum dolor samet"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTimer" type="Timer" parent="TextModal"]
+wait_time = 1.5
+one_shot = true
+
+[node name="AudioTyping" type="AudioStreamPlayer" parent="TextModal"]
+stream = ExtResource( 4 )
+bus = "FX"
+[connection signal="timeout" from="TextModal/LabelTimer" to="." method="_on_LabelTimer_timeout"]
