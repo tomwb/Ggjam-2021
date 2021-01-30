@@ -17,7 +17,7 @@ func hitted():
 	yield($AnimatedSprite,"animation_finished")
 	status = IDLE
 	
-func animations():
+func animations(_direction):
 	if status == WALK:
 		$AnimatedSprite.play("walk")
 	elif status == IDLE :

@@ -8,6 +8,7 @@ enum {
 export(String, FILE) var next_phase
 export var max_speed = 300
 export var hit_speed = 50
+var direction = Vector2()
 var acceleration_time = 0.05
 var acceleration = Vector2()
 var status = IDLE
@@ -19,12 +20,15 @@ func _ready():
 
 func player_init():
 	pass
-
-func _physics_process(delta):
-	var direction = Vector2()
+	
+func get_direction():
+	direction = Vector2()
 	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	direction = direction.normalized()
+	direction.normalized()
+
+func _physics_process(delta):
+	get_direction()
 	
 #	caso o player sair e voltar pra parede bate denovo
 	if last_collision_direction.x != 0 && direction.x != 0 && last_collision_direction.x == direction.x:
@@ -34,10 +38,10 @@ func _physics_process(delta):
 	
 	walk(direction, delta)
 	hit(delta)
-	animations()
+	animations(direction)
 	
 func walk(direction,delta):
-	if status == WALK || status == IDLE:
+	if GAME.game_time != 0 && (status == WALK || status == IDLE):
 		
 		if direction.x != 0 || direction.y != 0 :
 			status = WALK
@@ -62,7 +66,7 @@ func hit(delta):
 func hitted():
 	pass
 	
-func animations():
+func animations(direction):
 	pass
 	
 func _on_write_text_finished(title):

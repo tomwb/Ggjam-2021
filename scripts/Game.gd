@@ -1,7 +1,7 @@
 extends Node
 
 var game_time = 1
-var total_open_scennes = 1
+var total_open_scennes = 4
 
 func changeScenne(newScenne):
 	HUD.setPhaseFormat()

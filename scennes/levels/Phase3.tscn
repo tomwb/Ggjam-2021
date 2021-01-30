@@ -6,13 +6,13 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 68.9473, 66.4229 )
 
-[node name="Phase2" type="Node"]
+[node name="Phase3" type="Node"]
 
 [node name="MemoryItem" parent="." instance=ExtResource( 2 )]
 position = Vector2( 339.412, 82.0245 )
 
 [node name="PlayerPhase2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 231.794, 78.4465 )
+position = Vector2( 183.848, 217.789 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
