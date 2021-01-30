@@ -7,42 +7,34 @@
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
-margin_left = 250.0
-margin_top = 250.0
-size_flags_stretch_ratio = 0.0
-custom_constants/vseparation = 0
-columns = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="BtnPhase1" type="TextureButton" parent="CanvasLayer/GridContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
+[node name="BtnPhase1" type="TextureButton" parent="CanvasLayer"]
+margin_left = 95.3183
+margin_top = 116.508
+margin_right = 223.318
+margin_bottom = 244.508
 texture_normal = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-phase_number = 0
-phase = "res://scennes/levels/Phase1.tscn"
 
-[node name="BtnPhase2" type="TextureButton" parent="CanvasLayer/GridContainer"]
-margin_left = 132.0
-margin_right = 260.0
-margin_bottom = 128.0
+[node name="BtnPhase2" type="TextureButton" parent="CanvasLayer"]
+margin_left = 324.162
+margin_top = 114.389
+margin_right = 452.162
+margin_bottom = 242.389
 texture_normal = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-phase = "res://scennes/levels/Phase2.tscn"
+phase_number = 1
 
-[node name="BtnPhase3" type="TextureButton" parent="CanvasLayer/GridContainer"]
-margin_left = 264.0
-margin_right = 392.0
-margin_bottom = 128.0
+[node name="BtnPhase3" type="TextureButton" parent="CanvasLayer"]
+margin_left = 553.007
+margin_top = 127.102
+margin_right = 681.007
+margin_bottom = 255.102
 texture_normal = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -50,17 +42,18 @@ __meta__ = {
 }
 phase_number = 2
 
-[node name="BtnPhase4" type="TextureButton" parent="CanvasLayer/GridContainer"]
-margin_left = 396.0
-margin_right = 524.0
-margin_bottom = 128.0
+[node name="BtnPhase4" type="TextureButton" parent="CanvasLayer"]
+margin_left = 758.542
+margin_top = 141.935
+margin_right = 886.542
+margin_bottom = 269.935
 texture_normal = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 phase_number = 3
-[connection signal="pressed" from="CanvasLayer/GridContainer/BtnPhase1" to="CanvasLayer/GridContainer/BtnPhase1" method="_on_BtnPhase_pressed"]
-[connection signal="pressed" from="CanvasLayer/GridContainer/BtnPhase2" to="CanvasLayer/GridContainer/BtnPhase2" method="_on_BtnPhase_pressed"]
-[connection signal="pressed" from="CanvasLayer/GridContainer/BtnPhase3" to="CanvasLayer/GridContainer/BtnPhase3" method="_on_BtnPhase_pressed"]
-[connection signal="pressed" from="CanvasLayer/GridContainer/BtnPhase4" to="CanvasLayer/GridContainer/BtnPhase4" method="_on_BtnPhase_pressed"]
+[connection signal="pressed" from="CanvasLayer/BtnPhase1" to="CanvasLayer/BtnPhase1" method="_on_BtnPhase_pressed"]
+[connection signal="pressed" from="CanvasLayer/BtnPhase2" to="CanvasLayer/BtnPhase2" method="_on_BtnPhase_pressed"]
+[connection signal="pressed" from="CanvasLayer/BtnPhase3" to="CanvasLayer/BtnPhase3" method="_on_BtnPhase_pressed"]
+[connection signal="pressed" from="CanvasLayer/BtnPhase4" to="CanvasLayer/BtnPhase4" method="_on_BtnPhase_pressed"]

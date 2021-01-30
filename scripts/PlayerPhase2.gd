@@ -74,13 +74,14 @@ func _on_CollectorArea2D_area_entered(area):
 		area.destroy()
 		
 func _on_write_text_finished(title):
+	print(title)
 	if title == 'finish':
-		GAME.allow_phase(2)
-		GAME.changeScenne(next_phase)
+		GAME.set_phase(2)
 
 func _on_ChangeControlsTimer_timeout():
-	var new_input = rand_range(1, preset_inputs.size() - 1)
-	selected_input = new_input
-	HUD.showTextModal('start', [
-		"....What!!",
-	])
+	if status == IDLE || status == WALK:
+		var new_input = rand_range(1, preset_inputs.size() - 1)
+		selected_input = new_input
+		HUD.showTextModal('start', [
+			"....What!!",
+		])

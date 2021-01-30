@@ -3,13 +3,23 @@ extends Node
 var game_time = 1
 var total_open_scennes = 4
 
-func changeScenne(newScenne):
+var all_scennes = [
+	"res://scennes/levels/Phase1.tscn",
+	"res://scennes/levels/Phase2.tscn",
+	"res://scennes/levels/Phase3.tscn"
+]
+
+var main_scenne = "res://scennes/levels/Main.tscn"
+
+func changeScenne(index):
 	HUD.setPhaseFormat()
-	get_tree().change_scene(newScenne)
+	if all_scennes.size() > index:
+		get_tree().change_scene(all_scennes[index])
 	
 func changeScenneMain():
+	get_tree().change_scene(main_scenne)
 	HUD.setMainFormat()
-	get_tree().change_scene("res://scennes/levels/Main.tscn")
 
-func allow_phase(total):
+func set_phase(total):
 	total_open_scennes = total
+	changeScenne(total)

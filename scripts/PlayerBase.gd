@@ -5,7 +5,6 @@ enum {
 	IDLE, WALK, HIT, EVOLVE
 }
 
-export(String, FILE) var next_phase
 export var max_speed = 300
 export var hit_speed = 50
 var direction = Vector2()
@@ -66,8 +65,8 @@ func hit(delta):
 func hitted():
 	pass
 	
-func animations(direction):
+func animations(_direction):
 	pass
 	
-func _on_write_text_finished(title):
+func _on_write_text_finished(_title):
 	pass
