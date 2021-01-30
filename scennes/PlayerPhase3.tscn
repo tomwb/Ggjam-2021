@@ -1,16 +1,16 @@
 [gd_scene load_steps=46 format=2]
 
-[ext_resource path="res://scripts/PlayerPhase2.gd" type="Script" id=1]
-[ext_resource path="res://sprites/player/phase2_standLeft_strip1.png" type="Texture" id=2]
-[ext_resource path="res://sprites/player/phase2_standUp_strip1.png" type="Texture" id=3]
+[ext_resource path="res://scripts/PlayerPhase3.gd" type="Script" id=1]
+[ext_resource path="res://sprites/player/phase3_standRight_strip9.png" type="Texture" id=2]
+[ext_resource path="res://sprites/player/phase3_standUp_strip9.png" type="Texture" id=3]
 [ext_resource path="res://sprites/player/phase2_stunt_strip16.png" type="Texture" id=4]
 [ext_resource path="res://samples/hit.wav" type="AudioStream" id=5]
-[ext_resource path="res://sprites/player/phase2_runUp_strip4.png" type="Texture" id=6]
-[ext_resource path="res://sprites/player/phase2_standRight_strip1.png" type="Texture" id=7]
-[ext_resource path="res://sprites/player/phase2_runRight_strip4.png" type="Texture" id=8]
-[ext_resource path="res://sprites/player/phase2_runDown_strip4.png" type="Texture" id=9]
-[ext_resource path="res://sprites/player/phase2_standDown_strip1.png" type="Texture" id=10]
-[ext_resource path="res://sprites/player/phase2_runLeft_strip4.png" type="Texture" id=11]
+[ext_resource path="res://sprites/player/phase3_runUp_strip4.png" type="Texture" id=6]
+[ext_resource path="res://sprites/player/phase3_standLeft_strip9.png" type="Texture" id=7]
+[ext_resource path="res://sprites/player/phase3_runLeft_strip4.png" type="Texture" id=8]
+[ext_resource path="res://sprites/player/phase3_runDown_strip4.png" type="Texture" id=9]
+[ext_resource path="res://sprites/player/phase3_standDown_strip9.png" type="Texture" id=10]
+[ext_resource path="res://sprites/player/phase3_runRight_strip4.png" type="Texture" id=11]
 [ext_resource path="res://sprites/player/phase2Evolution_strip79.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=34]
@@ -124,7 +124,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=38]
-length = 0.1
+length = 0.9
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -133,10 +133,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:hframes")
@@ -148,7 +148,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ 9 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:vframes")
@@ -176,7 +176,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=39]
-length = 0.1
+length = 0.9
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -212,7 +212,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ 9 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Sprite:frame")
@@ -221,14 +221,14 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 }
 
 [sub_resource type="Animation" id=40]
-length = 0.1
+length = 0.9
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:vframes")
@@ -252,10 +252,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ 9 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:frame")
+tracks/2/path = NodePath("Sprite:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -264,26 +264,26 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ ExtResource( 7 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:texture")
+tracks/3/path = NodePath("Sprite:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 7 ) ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 }
 
 [sub_resource type="Animation" id=41]
-length = 0.1
+length = 0.9
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprite:hframes")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -292,10 +292,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ 9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("Sprite:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -304,10 +304,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 1 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/path = NodePath("Sprite:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -316,19 +316,19 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:vframes")
+tracks/3/path = NodePath("Sprite:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 }
 
 [sub_resource type="Animation" id=42]
@@ -360,28 +360,28 @@ tracks/1/keys = {
 "values": [ 1 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:texture")
+tracks/2/path = NodePath("Sprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ) ]
+"values": [ 0, 1, 2, 3 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:frame")
+tracks/3/path = NodePath("Sprite:texture")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3 ]
+"values": [ ExtResource( 9 ) ]
 }
 
 [sub_resource type="Animation" id=43]
@@ -642,7 +642,9 @@ position = Vector2( 0.944946, 4.4555 )
 shape = SubResource( 35 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 3 )
+texture = ExtResource( 8 )
+hframes = 4
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/evolve = SubResource( 36 )
@@ -663,9 +665,4 @@ active = true
 parameters/playback = SubResource( 46 )
 parameters/Idle/blend_position = Vector2( 0, -0.00709224 )
 parameters/Walk/blend_position = Vector2( 0, 0 )
-
-[node name="ChangeControlsTimer" type="Timer" parent="."]
-wait_time = 10.0
-autostart = true
 [connection signal="area_entered" from="CollectorArea2D" to="." method="_on_CollectorArea2D_area_entered"]
-[connection signal="timeout" from="ChangeControlsTimer" to="." method="_on_ChangeControlsTimer_timeout"]

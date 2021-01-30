@@ -38,8 +38,7 @@ func _on_CollectorArea2D_area_entered(area):
 
 func _on_write_text_finished(title):
 	if title == 'finish':
-		GAME.allow_phase(2)
-		GAME.changeScenne(next_phase)
+		GAME.set_phase(1)
 		
 func _on_TimerMidleText_timeout():
 	HUD.showTextModal('midle', [
