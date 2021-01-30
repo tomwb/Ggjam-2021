@@ -5,7 +5,7 @@ var text_title = ''
 signal write_text_finished
 
 func _ready():
-	$TextModal.visible = false
+	setMainFormat()
 	
 func showTextModal(title, newText):
 	text_title = title
@@ -30,3 +30,16 @@ func changeText():
 
 func _on_LabelTimer_timeout():
 	changeText()
+
+func _on_BtnClose_pressed():
+	GAME.changeScenneMain()
+	
+func setMainFormat():
+	$TextModal.visible = false
+	$TextModal/LabelTimer.stop()
+	$BtnClose.visible = false;
+	text = []
+	text_title = ''
+
+func setPhaseFormat():
+	$BtnClose.visible = true;

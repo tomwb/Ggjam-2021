@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://sprites/textModal.png" type="Texture" id=1]
+[ext_resource path="res://sprites/hud/textModal.png" type="Texture" id=1]
 [ext_resource path="res://fonts/Kenney Pixel.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scripts/Hud.gd" type="Script" id=3]
 [ext_resource path="res://samples/typing.wav" type="AudioStream" id=4]
+[ext_resource path="res://sprites/hud/cross.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -53,4 +54,18 @@ one_shot = true
 [node name="AudioTyping" type="AudioStreamPlayer" parent="TextModal"]
 stream = ExtResource( 4 )
 bus = "FX"
+
+[node name="BtnClose" type="TextureButton" parent="."]
+anchor_left = 0.948
+anchor_right = 0.996
+anchor_bottom = 0.091
+margin_left = -0.447144
+margin_top = 4.8726
+margin_right = 0.400879
+margin_bottom = 0.272602
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="TextModal/LabelTimer" to="." method="_on_LabelTimer_timeout"]
+[connection signal="pressed" from="BtnClose" to="." method="_on_BtnClose_pressed"]

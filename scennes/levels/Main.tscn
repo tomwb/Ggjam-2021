@@ -25,6 +25,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+phase_number = 0
 phase = "res://scennes/levels/Phase1.tscn"
 
 [node name="BtnPhase2" type="TextureButton" parent="CanvasLayer/GridContainer"]
@@ -36,6 +37,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+phase = "res://scennes/levels/Phase2.tscn"
 
 [node name="BtnPhase3" type="TextureButton" parent="CanvasLayer/GridContainer"]
 margin_left = 264.0
@@ -46,6 +48,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+phase_number = 2
 
 [node name="BtnPhase4" type="TextureButton" parent="CanvasLayer/GridContainer"]
 margin_left = 396.0
@@ -56,6 +59,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+phase_number = 3
 [connection signal="pressed" from="CanvasLayer/GridContainer/BtnPhase1" to="CanvasLayer/GridContainer/BtnPhase1" method="_on_BtnPhase_pressed"]
 [connection signal="pressed" from="CanvasLayer/GridContainer/BtnPhase2" to="CanvasLayer/GridContainer/BtnPhase2" method="_on_BtnPhase_pressed"]
 [connection signal="pressed" from="CanvasLayer/GridContainer/BtnPhase3" to="CanvasLayer/GridContainer/BtnPhase3" method="_on_BtnPhase_pressed"]
