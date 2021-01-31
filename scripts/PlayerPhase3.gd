@@ -41,7 +41,7 @@ func _on_finished():
 		"it's my graduation!!!",
 		"Now I can go my way safely",
 	])
-	yield(get_tree().create_timer(10), "timeout")
+	yield(get_tree().create_timer(9), "timeout")
 	GAME.set_phase(3)
 
 

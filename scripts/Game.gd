@@ -1,7 +1,7 @@
 extends Node
 
 var game_time = 1
-var total_open_scennes = 4
+var total_open_scennes = 0
 
 var all_scennes = [
 	"res://scennes/levels/Phase1.tscn",
@@ -24,6 +24,6 @@ func changeScenneMain():
 	HUD.setMainFormat()
 
 func set_phase(total):
-	if total_open_scennes < total:
+	if total_open_scennes <= total:
 		total_open_scennes = total
 	changeScenne(total)
