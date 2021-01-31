@@ -34,7 +34,7 @@ func _on_finished():
 		"I...I...Remember!!!",
 		"I Am a person!!!",
 		"This is my Childhood!!",
-		"I need to go deeper…"
+		"I need to go deeper..."
 	])
 	yield(get_tree().create_timer(10), "timeout")
 	GAME.set_phase(1)
@@ -44,5 +44,5 @@ func _on_TimerMidleText_timeout():
 		HUD.showTextModal('midle', [
 			"This place... is Familiar…",
 			"I have to get out here",
-			"I need to find my way…"
+			"I need to find my way..."
 		])

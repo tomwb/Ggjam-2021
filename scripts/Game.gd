@@ -13,11 +13,10 @@ var all_scennes = [
 var main_scenne = "res://scennes/levels/Main.tscn"
 
 func changeScenne(index):
-	HUD.setPhaseFormat()
 	if all_scennes.size() > index:
 		get_tree().change_scene(all_scennes[index])
 		HUD.fade("fadeoutblack")
-		HUD.setLevelFormat()
+		HUD.setPhaseFormat()
 	
 func changeScenneMain():
 	get_tree().change_scene(main_scenne)
@@ -27,3 +26,9 @@ func set_phase(total):
 	if total_open_scennes <= total:
 		total_open_scennes = total
 	changeScenne(total)
+	
+func finish_screen():
+	get_tree().change_scene("res://scennes/levels/Main.tscn")
+	HUD.fade("fadeoutblack")
+	HUD.setPhaseFormat()
+	

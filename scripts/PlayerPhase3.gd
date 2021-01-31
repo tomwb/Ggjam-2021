@@ -24,6 +24,7 @@ func _on_CollectorArea2D_area_entered(area):
 	if area.is_in_group("SpikeBall") || area.is_in_group("ThunderBall"):
 		status = DEAD
 		$AnimationTree.get("parameters/playback").travel("Hit")
+		$AudioHit.play()
 		yield(get_tree().create_timer(1.5),"timeout")
 		GAME.set_phase(2)
 	if area.is_in_group("ButtonEvent") :

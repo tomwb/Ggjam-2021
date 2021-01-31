@@ -14,10 +14,10 @@
 [ext_resource path="res://sprites/player/phase4End_strip12.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 19.785, 10.3073 )
+extents = Vector2( 19.785, 16.1856 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 22.1133, 25.4996 )
+extents = Vector2( 24.4529, 28.5065 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "evolve"
@@ -623,11 +623,11 @@ start_node = "Idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=33]
 
 [node name="PlayerPhase4" type="KinematicBody2D"]
-collision_mask = 2
+collision_mask = 50
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.276779, 27.1446 )
+position = Vector2( 0.276779, 25.1446 )
 shape = SubResource( 1 )
 
 [node name="AudioHit" type="AudioStreamPlayer" parent="."]
@@ -636,7 +636,7 @@ bus = "FX"
 
 [node name="CollectorArea2D" type="Area2D" parent="."]
 position = Vector2( -0.668167, 9.57716 )
-collision_mask = 28
+collision_mask = 60
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectorArea2D"]
 position = Vector2( 0.944946, 4.4555 )
@@ -645,7 +645,7 @@ shape = SubResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 hframes = 9
-frame = 7
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/evolve = SubResource( 3 )

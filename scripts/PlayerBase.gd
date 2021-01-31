@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 enum {
-	IDLE, WALK, HIT, EVOLVE, DEAD
+	IDLE, WALK, HIT, EVOLVE, DEAD, STOP
 }
 
 export var max_speed = 300
@@ -53,10 +53,11 @@ func walk(direction,delta):
 		var collision = move_and_collide(acceleration * GAME.game_time * delta)
 		if (direction.x !=0 || direction.y != 0) && collision:
 			acceleration = Vector2()
-			last_collision_direction = collision.normal
-			$AudioHit.play()
-			status = HIT
-			hitted()
+			if ! collision.collider.is_in_group("person"):
+				last_collision_direction = collision.normal
+				$AudioHit.play()
+				status = HIT
+				hitted()
 				
 func hit(delta):
 	if status == HIT:
