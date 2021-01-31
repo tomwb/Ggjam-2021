@@ -1,10 +1,16 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://sprites/hud/textModal.png" type="Texture" id=1]
 [ext_resource path="res://fonts/Kenney Pixel.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scripts/Hud.gd" type="Script" id=3]
 [ext_resource path="res://samples/typing.wav" type="AudioStream" id=4]
 [ext_resource path="res://sprites/hud/cross.png" type="Texture" id=5]
+[ext_resource path="res://sprites/phase4/auguste_l1_strip12.png" type="Texture" id=6]
+[ext_resource path="res://sprites/phase4/auguste_l5_strip12.png" type="Texture" id=7]
+[ext_resource path="res://sprites/phase4/auguste_l6_strip12.png" type="Texture" id=8]
+[ext_resource path="res://sprites/phase4/auguste_l7_strip12.png" type="Texture" id=9]
+[ext_resource path="res://sprites/phase4/auguste_l2_strip12.png" type="Texture" id=10]
+[ext_resource path="res://sprites/phase4/auguste_l3_strip12.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -67,5 +73,45 @@ texture_normal = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HudName" type="Node2D" parent="."]
+position = Vector2( 418.169, 38.8726 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpriteA" type="Sprite" parent="HudName"]
+texture = ExtResource( 6 )
+hframes = 12
+
+[node name="SpriteU" type="Sprite" parent="HudName"]
+position = Vector2( 33, 0 )
+texture = ExtResource( 10 )
+hframes = 12
+
+[node name="SpriteG" type="Sprite" parent="HudName"]
+position = Vector2( 65, 0 )
+texture = ExtResource( 11 )
+hframes = 12
+
+[node name="SpriteU2" type="Sprite" parent="HudName"]
+position = Vector2( 96.5, 0 )
+texture = ExtResource( 10 )
+hframes = 12
+
+[node name="SpriteS" type="Sprite" parent="HudName"]
+position = Vector2( 125.5, 0 )
+texture = ExtResource( 7 )
+hframes = 12
+
+[node name="SpriteT" type="Sprite" parent="HudName"]
+position = Vector2( 154.5, 0 )
+texture = ExtResource( 8 )
+hframes = 12
+
+[node name="SpriteE" type="Sprite" parent="HudName"]
+position = Vector2( 184.5, 0 )
+texture = ExtResource( 9 )
+hframes = 12
 [connection signal="timeout" from="TextModal/LabelTimer" to="." method="_on_LabelTimer_timeout"]
 [connection signal="pressed" from="BtnClose" to="." method="_on_BtnClose_pressed"]
