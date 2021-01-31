@@ -10,7 +10,7 @@ var people = [
 	},
 	{
 		sprite = "res://sprites/phase4/level4_people2_2.png",
-		text= ["Oh My brother! This disease is terrible! Glad you remembered us!"]
+		text= ["Oh my brother! This disease is terrible! Glad you remembered us!"]
 	},
 	{
 		sprite = "res://sprites/phase4/level4_people2_3.png",
@@ -18,15 +18,15 @@ var people = [
 	},
 	{
 		sprite = "res://sprites/phase4/level4_people2_4.png",
-		text= ["Face it Lion! You Just won the bingo!"]
+		text= ["Face it Lion! You just won the bingo!"]
 	},
 	{
 		sprite = "res://sprites/phase4/level4_people2_5.png",
-		text= ["Dad, you must come back to us! Please don't forget us! Don't Let the Disease win!"]
+		text= ["Dad, you must come back to us! Please don't forget us! Don't let the disease win!"]
 	},
 	{
 		sprite = "res://sprites/phase4/level4_people2_6.png",
-		text= ["if you take your medicine right, you will be capable to recover some memories! and they Will control your symptoms"]
+		text= ["If you take your medicine right, you will be capable to recover some memories! And they will control your symptoms"]
 	},
 	{
 		sprite = "res://sprites/phase4/level4_people2_7.png",

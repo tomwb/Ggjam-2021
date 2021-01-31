@@ -20,7 +20,7 @@ func _ready():
 
 func _on_BtnCredits_pressed():
 	get_tree().change_scene(\"res://scennes/levels/Credits.tscn\")
-	HUD.setLevelFormat()
+	HUD.setPhaseFormat()
 "
 
 [node name="Main" type="Node"]

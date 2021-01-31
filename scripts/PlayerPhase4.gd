@@ -2,13 +2,13 @@ extends "res://scripts/PlayerBase.gd"
 
 func player_init():
 	HUD.connect("catch_all_letters", self, "on_catch_all_letters")
-#	HUD.showTextModal('start', [
-#		"I almost remembered everything",
-#		"But, it seems that something is missing ....",
-#		"a key...",
-#		"Let's find this thing I missed ... What is it?",
-#	])
-	pass
+	HUD.showTextModal('start', [
+		"I almost remembered everything",
+		"But, it seems that something is missing ....",
+		"a key...",
+		"Let's find this thing I missed ... What is it?",
+	])
+	
 	
 
 func hitted():
