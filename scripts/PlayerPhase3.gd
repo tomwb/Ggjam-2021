@@ -45,9 +45,8 @@ func _on_finished():
 	yield(get_tree().create_timer(9), "timeout")
 	GAME.set_phase(3)
 
-
 func _on_CallTextArea_area_entered(area):
 	HUD.showTextModal('start', [
 		"I need to find a way to turn these rays off..",
 	])
-	get_node("../CallTextArea").queue_free()
+	get_node("../EnemiesWall/CallTextArea").queue_free()

@@ -9,7 +9,7 @@
 [ext_resource path="res://sprites/memory/memorias1.png" type="Texture" id=7]
 [ext_resource path="res://musics/ea000123.ogg" type="AudioStream" id=8]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 resource_name = "Credits"
 length = 20.0
 tracks/0/type = "value"
@@ -75,7 +75,7 @@ http://www.dominiopublico.gov.br/pesquisa/DetalheObraForm.do?select_action=&co_o
 [/center]", "[center] Thank You [/center]" ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "TextToTheEnd"
 length = 30.0
 tracks/0/type = "value"
@@ -163,15 +163,15 @@ tracks/3/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 20
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 25
+[sub_resource type="DynamicFont" id=5]
+size = 30
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=6]
 size = 35
 font_data = ExtResource( 1 )
 
@@ -194,8 +194,8 @@ position = Vector2( 14.6982, 405.19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
 autoplay = "TextToTheEnd"
-anims/Credits = SubResource( 5 )
-anims/TextToTheEnd = SubResource( 4 )
+anims/Credits = SubResource( 1 )
+anims/TextToTheEnd = SubResource( 2 )
 anims/TheEnd = SubResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Animation/AnimationPlayer"]
@@ -205,7 +205,7 @@ margin_right = 1024.0
 margin_bottom = 1200.01
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center] Developers
@@ -273,7 +273,7 @@ margin_left = 128.0
 margin_top = 248.0
 margin_right = 896.0
 margin_bottom = 391.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 text = "This game is for awareness and in honor of everyone who suffers from this disease. LikeAuguste Deter, the first diagnosed with the disease."
 align = 1
 autowrap = true
@@ -287,7 +287,7 @@ margin_left = 64.0
 margin_top = 380.0
 margin_right = 960.0
 margin_bottom = 523.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
 text = "The End."
 align = 1
 autowrap = true

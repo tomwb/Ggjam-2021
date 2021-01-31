@@ -137,7 +137,7 @@ position = Vector2( 543.381, 155.276 )
 position = Vector2( 1309.81, 923.588 )
 
 [node name="PlayerPhase3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2556.28, 2580.2 )
+position = Vector2( 2535.3, 2604.17 )
 
 [node name="Camera2D" type="Camera2D" parent="PlayerPhase3"]
 position = Vector2( 0, -80 )
@@ -469,17 +469,17 @@ position = Vector2( 141.086, -293.448 )
 [node name="ThunderBall3" parent="EnemiesWall" instance=ExtResource( 12 )]
 position = Vector2( 141.086, -293.448 )
 
+[node name="CallTextArea" type="Area2D" parent="EnemiesWall"]
+position = Vector2( -550.02, -786.13 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemiesWall/CallTextArea"]
+position = Vector2( -10.6907, 1.7818 )
+shape = SubResource( 4 )
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
 bus = "Musics"
-
-[node name="CallTextArea" type="Area2D" parent="."]
-position = Vector2( 557.37, 371.58 )
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CallTextArea"]
-position = Vector2( -10.6907, 1.7818 )
-shape = SubResource( 4 )
 [connection signal="is_off_pressed" from="ButtonEvent" to="EnemiesWall" method="_on_ButtonEvent_is_off_pressed"]
-[connection signal="area_entered" from="CallTextArea" to="PlayerPhase3" method="_on_CallTextArea_area_entered"]
+[connection signal="area_entered" from="EnemiesWall/CallTextArea" to="PlayerPhase3" method="_on_CallTextArea_area_entered"]

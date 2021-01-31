@@ -81,10 +81,10 @@ __meta__ = {
 phase_number = 3
 
 [node name="BtnCredits" type="TextureButton" parent="CanvasLayer"]
-margin_left = 880.368
-margin_top = 302.959
-margin_right = 1132.37
-margin_bottom = 628.959
+margin_left = 836.92
+margin_top = 295.471
+margin_right = 1088.92
+margin_bottom = 621.471
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 8 )
 expand = true

@@ -3,6 +3,9 @@ extends Node
 var game_time = 1
 var total_open_scennes = 0
 
+func _ready():
+	pass
+
 var all_scennes = [
 	"res://scennes/levels/Phase1.tscn",
 	"res://scennes/levels/Phase2.tscn",
@@ -28,7 +31,7 @@ func set_phase(total):
 	changeScenne(total)
 	
 func finish_screen():
-	get_tree().change_scene("res://scennes/levels/Main.tscn")
+	get_tree().change_scene("res://scennes/TheEnd.tscn")
 	HUD.fade("fadeoutblack")
 	HUD.setPhaseFormat()
 	
