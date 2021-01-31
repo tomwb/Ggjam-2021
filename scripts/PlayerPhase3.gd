@@ -49,4 +49,4 @@ func _on_CallTextArea_area_entered(area):
 	HUD.showTextModal('start', [
 		"I need to find a way to turn these rays off..",
 	])
-	area.queue_free()
+	get_node("../CallTextArea").queue_free()

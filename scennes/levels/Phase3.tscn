@@ -479,7 +479,7 @@ position = Vector2( 557.37, 371.58 )
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CallTextArea"]
-position = Vector2( -10.6907, 1.7818 )
+position = Vector2( -9.6907, 0.7818 )
 shape = SubResource( 4 )
 [connection signal="is_off_pressed" from="ButtonEvent" to="EnemiesWall" method="_on_ButtonEvent_is_off_pressed"]
 [connection signal="area_entered" from="CallTextArea" to="PlayerPhase3" method="_on_CallTextArea_area_entered"]

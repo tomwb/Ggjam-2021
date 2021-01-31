@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://sprites/spikeball_strip6.png" type="Texture" id=1]
+[ext_resource path="res://sprites/spikeball.png" type="Texture" id=1]
 [ext_resource path="res://scripts/SpikeBall.gd" type="Script" id=2]
 [ext_resource path="res://sprites/chainScrew.png" type="Texture" id=4]
 
@@ -22,7 +22,7 @@ texture = ExtResource( 4 )
 [node name="Mass" type="Area2D" parent="." groups=[
 "SpikeBall",
 ]]
-position = Vector2( -83.611, -75.2692 )
+position = Vector2( -73.391, 85.2644 )
 collision_layer = 16
 collision_mask = 0
 
