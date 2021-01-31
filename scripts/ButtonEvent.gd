@@ -8,6 +8,7 @@ func _ready():
 	pass
 	
 func set_is_off(value):
+	$AudioStreamPlayer.play()
 	is_off = value
 	if (value == true):
 		emit_signal("is_off_pressed")

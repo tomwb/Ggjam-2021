@@ -21,6 +21,8 @@ func animations(direction):
 		$AnimationTree.get("parameters/playback").travel("Idle")
 		
 func _on_CollectorArea2D_area_entered(area):
+	if area.is_in_group("SpikeBall") :
+		GAME.set_phase(2)
 	if area.is_in_group("ButtonEvent") :
 		area.is_off = true
 	if area.is_in_group("MemoryItem") :

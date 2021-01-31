@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 enum {
-	IDLE, WALK, HIT, EVOLVE
+	IDLE, WALK, HIT, EVOLVE, DEAD
 }
 
 export var max_speed = 300

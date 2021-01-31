@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sprites/spikeball_strip6.png" type="Texture" id=1]
 [ext_resource path="res://scripts/SpikeBall.gd" type="Script" id=2]
-[ext_resource path="res://scennes/ChainLink.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sprites/chainScrew.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -17,12 +16,15 @@ chain_link_count = 5
 
 [node name="ChainLinks" type="Node2D" parent="Chain"]
 
-[node name="ChainLink" parent="Chain/ChainLinks" instance=ExtResource( 3 )]
-
 [node name="ChainScrew" type="Sprite" parent="Chain"]
 texture = ExtResource( 4 )
 
-[node name="Mass" type="Area2D" parent="."]
+[node name="Mass" type="Area2D" parent="." groups=[
+"SpikeBall",
+]]
+position = Vector2( -87.7751, 70.3689 )
+collision_layer = 16
+collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="Mass"]
 texture = ExtResource( 1 )

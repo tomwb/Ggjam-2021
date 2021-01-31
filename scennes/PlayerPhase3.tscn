@@ -635,7 +635,7 @@ stream = ExtResource( 5 )
 bus = "FX"
 
 [node name="CollectorArea2D" type="Area2D" parent="."]
-collision_mask = 12
+collision_mask = 28
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectorArea2D"]
 position = Vector2( 0.944946, 4.4555 )
@@ -644,7 +644,7 @@ shape = SubResource( 35 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 hframes = 9
-frame = 4
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/evolve = SubResource( 36 )

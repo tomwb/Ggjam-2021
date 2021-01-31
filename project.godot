@@ -35,6 +35,7 @@ window/stretch/aspect="keep_height"
 2d_physics/layer_2="Wall"
 2d_physics/layer_3="MemoryItem"
 2d_physics/layer_4="ButtonActive"
+2d_physics/layer_5="SpikeBall"
 
 [rendering]
 
