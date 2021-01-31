@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scennes/PlayerPhase3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scennes/MemoryItem.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://sprites/phase3/phase3_rua3.png" type="Texture" id=8]
 [ext_resource path="res://scennes/ButtonEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scennes/SpikeBall.tscn" type="PackedScene" id=10]
+[ext_resource path="res://musics/PerchanceMusic_-_Alone_Together_1.ogg" type="AudioStream" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -276,3 +277,8 @@ speed = 50
 position = Vector2( 1688.74, 228.535 )
 speed = 50
 chain_link_count = 7
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
+bus = "Musics"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/BtnPhaseSelector.gd" type="Script" id=1]
+[ext_resource path="res://musics/Indian-Ocean-Twilight_Looping.ogg" type="AudioStream" id=2]
 [ext_resource path="res://sprites/squareWhite.png" type="Texture" id=4]
 
 [node name="Main" type="Node"]
@@ -44,15 +45,20 @@ phase_number = 2
 
 [node name="BtnPhase4" type="TextureButton" parent="CanvasLayer"]
 margin_left = 758.542
-margin_top = 141.935
+margin_top = 139.816
 margin_right = 886.542
-margin_bottom = 269.935
+margin_bottom = 267.816
 texture_normal = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 phase_number = 3
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+bus = "Musics"
 [connection signal="pressed" from="CanvasLayer/BtnPhase1" to="CanvasLayer/BtnPhase1" method="_on_BtnPhase_pressed"]
 [connection signal="pressed" from="CanvasLayer/BtnPhase2" to="CanvasLayer/BtnPhase2" method="_on_BtnPhase_pressed"]
 [connection signal="pressed" from="CanvasLayer/BtnPhase3" to="CanvasLayer/BtnPhase3" method="_on_BtnPhase_pressed"]

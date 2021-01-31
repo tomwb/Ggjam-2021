@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scennes/PlayerPhase2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scennes/MemoryItem.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://sprites/grassStart/grassStart.tres" type="Texture" id=4]
 [ext_resource path="res://sprites/grassEnd/grassEnd.tres" type="Texture" id=5]
 [ext_resource path="res://sprites/phase2floor.png" type="Texture" id=6]
+[ext_resource path="res://musics/PerchanceMusic_-_Alone_Together_1.ogg" type="AudioStream" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -115,3 +116,8 @@ position = Vector2( 132.561, 432.874 )
 scale = Vector2( 1.27621, 1.1601 )
 current = true
 zoom = Vector2( 0.65, 0.65 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+bus = "Musics"
