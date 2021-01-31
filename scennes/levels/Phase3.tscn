@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scennes/PlayerPhase3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scennes/MemoryItem.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://scennes/ButtonEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scennes/SpikeBall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://musics/PerchanceMusic_-_Alone_Together_1.ogg" type="AudioStream" id=11]
+[ext_resource path="res://scennes/ThunderBall.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scennes/EnemiesWall.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -118,6 +120,9 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 5/shapes = [  ]
 5/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 166.259, 60.1399 )
+
 [node name="Phase3" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -132,9 +137,10 @@ position = Vector2( 543.381, 155.276 )
 position = Vector2( 1309.81, 923.588 )
 
 [node name="PlayerPhase3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2645.13, 2519.25 )
+position = Vector2( 2520.38, 2633.52 )
 
 [node name="Camera2D" type="Camera2D" parent="PlayerPhase3"]
+position = Vector2( 0, -80 )
 rotating = true
 current = true
 zoom = Vector2( 0.65, 0.65 )
@@ -278,7 +284,202 @@ position = Vector2( 1688.74, 228.535 )
 speed = 50
 chain_link_count = 7
 
+[node name="EnemiesWall" parent="." instance=ExtResource( 13 )]
+
+[node name="ThunderBall4" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -500.039, -813.069 )
+
+[node name="ThunderBall5" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -560.584, -809.706 )
+
+[node name="ThunderBall6" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -626.174, -811.388 )
+
+[node name="ThunderBall7" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -755.672, -998.067 )
+
+[node name="ThunderBall8" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -431.309, -808.345 )
+
+[node name="ThunderBall9" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -689.818, -806.226 )
+
+[node name="ThunderBall10" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 139.21, -231.701 )
+
+[node name="ThunderBall11" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 531.648, -295.919 )
+
+[node name="ThunderBall12" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 659.609, -105.1 )
+
+[node name="ThunderBall13" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1034.51, -100.61 )
+
+[node name="ThunderBall14" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 17.5605, -284.694 )
+
+[node name="ThunderBall15" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -45.2974, -282.449 )
+
+[node name="ThunderBall45" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -706.009, -165.409 )
+
+[node name="ThunderBall46" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -784.871, -162.269 )
+
+[node name="ThunderBall47" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -1004.27, -992.242 )
+
+[node name="ThunderBall48" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -936.315, -992.242 )
+
+[node name="ThunderBall49" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -853.254, -999.793 )
+
+[node name="ThunderBall50" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -502.133, -878.977 )
+
+[node name="ThunderBall51" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -559.279, -877.39 )
+
+[node name="ThunderBall52" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -629.125, -878.977 )
+
+[node name="ThunderBall53" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -59.6403, -999.93 )
+
+[node name="ThunderBall57" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -59.6403, -934.414 )
+
+[node name="ThunderBall58" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -57.1205, -866.378 )
+
+[node name="ThunderBall59" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 5.87561, -596.755 )
+
+[node name="ThunderBall60" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 8.39551, -657.231 )
+
+[node name="ThunderBall54" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 83.9907, -994.89 )
+
+[node name="ThunderBall55" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 152.026, -994.89 )
+
+[node name="ThunderBall56" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 209.983, -994.89 )
+
+[node name="ThunderBall16" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -486.595, 466.804 )
+
+[node name="ThunderBall17" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -315.155, 590.621 )
+
+[node name="ThunderBall18" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -626.286, 476.329 )
+
+[node name="ThunderBall19" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -1004.09, 1241.46 )
+
+[node name="ThunderBall20" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -1004.09, 1324 )
+
+[node name="ThunderBall21" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -1004.09, 1400.2 )
+
+[node name="ThunderBall22" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -1007.26, 1482.74 )
+
+[node name="ThunderBall23" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -1007.26, 1562.11 )
+
+[node name="ThunderBall24" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 262.658, 736.663 )
+
+[node name="ThunderBall25" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 202.337, 736.663 )
+
+[node name="ThunderBall26" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 262.658, 803.333 )
+
+[node name="ThunderBall27" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1542.1, 1238.28 )
+
+[node name="ThunderBall28" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1484.96, 1235.11 )
+
+[node name="ThunderBall29" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1415.11, 1238.28 )
+
+[node name="ThunderBall30" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1545.28, 1317.65 )
+
+[node name="ThunderBall31" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 459.496, 666.817 )
+
+[node name="ThunderBall32" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 396, 660.467 )
+
+[node name="ThunderBall33" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -246.711, 126.36 )
+
+[node name="ThunderBall61" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -306.711, 126.36 )
+
+[node name="ThunderBall62" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( -372.711, 128.36 )
+
+[node name="ThunderBall34" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 970.171, 346.512 )
+
+[node name="ThunderBall35" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1544.34, 349.34 )
+
+[node name="ThunderBall36" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1360.49, -612.325 )
+
+[node name="ThunderBall37" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1419.89, -614.154 )
+
+[node name="ThunderBall38" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1230.39, -492.531 )
+
+[node name="ThunderBall39" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1156.85, -492.531 )
+
+[node name="ThunderBall40" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1077.65, -492.531 )
+
+[node name="ThunderBall41" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 1012.6, -495.36 )
+
+[node name="ThunderBall42" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 933.401, -498.188 )
+
+[node name="ThunderBall43" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 769.353, -549.1 )
+
+[node name="ThunderBall44" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 701.47, -554.757 )
+
+[node name="ThunderBall2" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 141.086, -293.448 )
+
+[node name="ThunderBall3" parent="EnemiesWall" instance=ExtResource( 12 )]
+position = Vector2( 141.086, -293.448 )
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
 bus = "Musics"
+
+[node name="CallTextArea" type="Area2D" parent="."]
+position = Vector2( 557.37, 371.58 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CallTextArea"]
+position = Vector2( -10.6907, 1.7818 )
+shape = SubResource( 4 )
+[connection signal="is_off_pressed" from="ButtonEvent" to="EnemiesWall" method="_on_ButtonEvent_is_off_pressed"]
+[connection signal="area_entered" from="CallTextArea" to="PlayerPhase3" method="_on_CallTextArea_area_entered"]

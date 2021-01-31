@@ -63,17 +63,21 @@ func animations(direction):
 		
 func _on_CollectorArea2D_area_entered(area):
 	if area.is_in_group("MemoryItem") :
-		status = EVOLVE
-		$AnimationTree.get("parameters/playback").travel("Evolve")
-		HUD.showTextModal('finish', [
-			"I...I...Remember!!!",
-			"it's like riding a bike!!!",
-			"Now I can go my way safely",
-		])
+		area.connect("collected_animation_finished", self, "_on_finished")
 		area.destroy()
-		yield(get_tree().create_timer(7), "timeout")
-		GAME.set_phase(2)
+		status = EVOLVE
 		
+
+func _on_finished():
+	$AnimationTree.get("parameters/playback").travel("Evolve")
+	HUD.evolve("phase2", [
+		"I...I...Remember!!!",
+		"it's like riding a bike!!!",
+		"Now I can go my way safely",
+	])
+	yield(get_tree().create_timer(10), "timeout")
+	GAME.set_phase(2)
+	
 
 func _on_ChangeControlsTimer_timeout():
 	if status == IDLE || status == WALK:
