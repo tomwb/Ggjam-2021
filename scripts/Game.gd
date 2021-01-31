@@ -21,5 +21,6 @@ func changeScenneMain():
 	HUD.setMainFormat()
 
 func set_phase(total):
-	total_open_scennes = total
+	if total_open_scennes < total:
+		total_open_scennes = total
 	changeScenne(total)

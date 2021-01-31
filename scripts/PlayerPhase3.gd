@@ -2,8 +2,8 @@ extends "res://scripts/PlayerBase.gd"
 
 func player_init():
 	HUD.showTextModal('start', [
-		"....",
-		".......",
+		"Now I can move properly...",
+		"Finally I can find out who I am",
 	])
 	
 func hitted():
@@ -25,10 +25,9 @@ func _on_CollectorArea2D_area_entered(area):
 		status = EVOLVE
 		$AnimationTree.get("parameters/playback").travel("Evolve")
 		HUD.showTextModal('finish', [
-			"Lorem Ipsum Dolor Samet",
-			"Lorem Ipsum Dolor Samet",
-			"Lorem Ipsum Dolor Samet",
-			"Lorem Ipsum Dolor Samet",
+			"I...I...Remember!!!",
+			"it's my graduation!!!",
+			"Now I can go my way safely",
 		])
 		area.destroy()
 		

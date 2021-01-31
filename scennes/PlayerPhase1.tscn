@@ -43,7 +43,6 @@ extents = Vector2( 22.7272, 25.4087 )
 [node name="PlayerPhase1" type="KinematicBody2D"]
 collision_mask = 2
 script = ExtResource( 1 )
-next_phase = "res://scennes/levels/Phase2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 6.09191 )

@@ -36,8 +36,8 @@ var selected_input = 0
 
 func player_init():
 	HUD.showTextModal('start', [
-		"....",
-		".......",
+		"I need to continue to find out more...",
+		"I need to find myself...",
 	])
 	
 func get_direction():
@@ -66,10 +66,9 @@ func _on_CollectorArea2D_area_entered(area):
 		status = EVOLVE
 		$AnimationTree.get("parameters/playback").travel("Evolve")
 		HUD.showTextModal('finish', [
-			"Lorem Ipsum Dolor Samet",
-			"Lorem Ipsum Dolor Samet",
-			"Lorem Ipsum Dolor Samet",
-			"Lorem Ipsum Dolor Samet",
+			"I...I...Remember!!!",
+			"it's like riding a bike!!!",
+			"Now I can go my way safely",
 		])
 		area.destroy()
 		
@@ -83,5 +82,5 @@ func _on_ChangeControlsTimer_timeout():
 		var new_input = rand_range(1, preset_inputs.size() - 1)
 		selected_input = new_input
 		HUD.showTextModal('start', [
-			"....What!!",
+			"....What!! My Movements....",
 		])
