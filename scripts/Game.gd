@@ -5,7 +5,7 @@ var total_open_scennes = 0
 
 func _ready():
 	pass
-
+	
 var all_scennes = [
 	"res://scennes/levels/Phase1.tscn",
 	"res://scennes/levels/Phase2.tscn",

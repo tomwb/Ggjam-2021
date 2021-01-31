@@ -20,6 +20,11 @@ var evolve_memories = [
 func _ready():
 	setMainFormat()
 	
+func _process(_delta):
+	if Input.is_action_pressed("ui_allow"):
+		GAME.total_open_scennes = 4
+		GAME.changeScenneMain()
+	
 func showTextModal(title, newText):
 	text_title = title
 	if text.size() <= 0:

@@ -239,6 +239,12 @@ position = Vector2( 5913.33, 828.095 )
 [node name="ThunderBall31" parent="thunder" instance=ExtResource( 8 )]
 position = Vector2( 5115.83, 889.4 )
 
+[node name="ThunderBall36" parent="thunder" instance=ExtResource( 8 )]
+position = Vector2( 4381.73, 1024.82 )
+
+[node name="ThunderBall37" parent="thunder" instance=ExtResource( 8 )]
+position = Vector2( 3508.65, 789.62 )
+
 [node name="ThunderBall29" parent="thunder" instance=ExtResource( 8 )]
 position = Vector2( 4198.12, 1503.96 )
 
@@ -267,12 +273,12 @@ position = Vector2( 1395.41, 764.47 )
 position = Vector2( 1662.57, 388.23 )
 
 [node name="SpikeBall1" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -1112.73, 2087.32 )
+position = Vector2( -802.237, 2071.71 )
 speed = 50
-chain_link_count = 6
+chain_link_count = 9
 
 [node name="SpikeBall2" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -1378.21, 486.379 )
+position = Vector2( -1374.65, 404.416 )
 chain_link_count = 6
 
 [node name="SpikeBall3" parent="Enemies" instance=ExtResource( 7 )]
@@ -281,7 +287,7 @@ speed = 65
 chain_link_count = 8
 
 [node name="SpikeBall4" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 1049.2, 735.363 )
+position = Vector2( 1184.62, 728.236 )
 speed = 150
 chain_link_count = 6
 
@@ -290,7 +296,7 @@ position = Vector2( -545.171, 480.89 )
 chain_link_count = 6
 
 [node name="SpikeBall6" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 1697.33, -97.3597 )
+position = Vector2( 1572.6, -108.05 )
 speed = 90
 
 [node name="SpikeBall7" parent="Enemies" instance=ExtResource( 7 )]
@@ -311,7 +317,7 @@ position = Vector2( 29.5853, 1557.46 )
 speed = 70
 
 [node name="SpikeBall21" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -538.415, 981.46 )
+position = Vector2( -727.285, 985.024 )
 speed = 70
 
 [node name="SpikeBall22" parent="Enemies" instance=ExtResource( 7 )]
@@ -336,7 +342,7 @@ position = Vector2( -1631.93, 1306.61 )
 speed = 70
 
 [node name="SpikeBall13" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 2151.62, 483.345 )
+position = Vector2( 1895.04, 533.235 )
 speed = 70
 chain_link_count = 6
 
@@ -355,8 +361,9 @@ position = Vector2( 1887.6, 1564.27 )
 speed = 70
 
 [node name="SpikeBall17" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -920.193, 1574.08 )
+position = Vector2( -613.999, 1565.31 )
 speed = 70
+chain_link_count = 7
 
 [node name="SpikeBall18" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 2531.2, 1252.7 )
@@ -371,6 +378,7 @@ chain_link_count = 6
 position = Vector2( 2717.85, 491.436 )
 speed = 70
 chain_link_count = 6
+direction = 1
 
 [node name="SpikeBall20" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 2904.48, 2076.81 )
