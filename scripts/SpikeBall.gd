@@ -13,14 +13,14 @@ func _ready():
 func _process(delta):
 
 	radius = 22.5 * chain_link_count
-	while $chain.get_child_count() <= chain_link_count:
-		$chain.add_child(chain_link.instance())
+	while $Chain/ChainLinks.get_child_count() <= chain_link_count:
+		$Chain/ChainLinks.add_child(chain_link.instance())
 	angle += speed * delta
 	$Mass.position = Vector2(sin(deg2rad(angle)),cos(deg2rad(angle))) * radius
 		
 	var radius_chain = 0	
-	for chain_link in $chain.get_children():
-		chain_link.position = Vector2( sin(deg2rad(angle)), cos(deg2rad(angle))) * (radius / $chain.get_child_count()) * radius_chain
+	for chain_link in $Chain/ChainLinks.get_children():
+		chain_link.position = Vector2( sin(deg2rad(angle)), cos(deg2rad(angle))) * (radius / $Chain/ChainLinks.get_child_count()) * radius_chain
 		radius_chain += 1
 
 	

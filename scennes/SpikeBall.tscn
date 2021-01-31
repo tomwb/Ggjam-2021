@@ -1,21 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/spikeball_strip6.png" type="Texture" id=1]
 [ext_resource path="res://scripts/SpikeBall.gd" type="Script" id=2]
 [ext_resource path="res://scennes/ChainLink.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sprites/chainScrew.png" type="Texture" id=4]
 
+[sub_resource type="CircleShape2D" id=1]
+radius = 31.8899
+
 [node name="SpikeBall" type="Node2D"]
 script = ExtResource( 2 )
 speed = 20
 chain_link_count = 5
 
-[node name="chain" type="Node2D" parent="."]
+[node name="Chain" type="Node2D" parent="."]
 
-[node name="ChainScrew" type="Sprite" parent="chain"]
+[node name="ChainLinks" type="Node2D" parent="Chain"]
+
+[node name="ChainLink" parent="Chain/ChainLinks" instance=ExtResource( 3 )]
+
+[node name="ChainScrew" type="Sprite" parent="Chain"]
 texture = ExtResource( 4 )
-
-[node name="ChainLink" parent="chain" instance=ExtResource( 3 )]
 
 [node name="Mass" type="Area2D" parent="."]
 
@@ -23,3 +28,6 @@ texture = ExtResource( 4 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 64, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mass"]
+shape = SubResource( 1 )
