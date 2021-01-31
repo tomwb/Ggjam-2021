@@ -71,11 +71,9 @@ func _on_CollectorArea2D_area_entered(area):
 			"Now I can go my way safely",
 		])
 		area.destroy()
-		
-func _on_write_text_finished(title):
-	print(title)
-	if title == 'finish':
+		yield(get_tree().create_timer(7), "timeout")
 		GAME.set_phase(2)
+		
 
 func _on_ChangeControlsTimer_timeout():
 	if status == IDLE || status == WALK:

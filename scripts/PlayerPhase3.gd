@@ -21,6 +21,8 @@ func animations(direction):
 		$AnimationTree.get("parameters/playback").travel("Idle")
 		
 func _on_CollectorArea2D_area_entered(area):
+	if area.is_in_group("ButtonEvent") :
+		area.is_off = true
 	if area.is_in_group("MemoryItem") :
 		status = EVOLVE
 		$AnimationTree.get("parameters/playback").travel("Evolve")
@@ -33,4 +35,4 @@ func _on_CollectorArea2D_area_entered(area):
 		
 func _on_write_text_finished(title):
 	if title == 'finish':
-		GAME.set_phase(4)
+		GAME.set_phase(3)

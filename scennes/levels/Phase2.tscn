@@ -109,7 +109,7 @@ __meta__ = {
 position = Vector2( 768.55, -1550.74 )
 
 [node name="PlayerPhase2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 141.442, 445.033 )
+position = Vector2( 132.561, 432.874 )
 
 [node name="Camera2D" type="Camera2D" parent="PlayerPhase2"]
 scale = Vector2( 1.27621, 1.1601 )

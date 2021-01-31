@@ -6,7 +6,8 @@ var total_open_scennes = 4
 var all_scennes = [
 	"res://scennes/levels/Phase1.tscn",
 	"res://scennes/levels/Phase2.tscn",
-	"res://scennes/levels/Phase3.tscn"
+	"res://scennes/levels/Phase3.tscn",
+	"res://scennes/levels/Phase4.tscn"
 ]
 
 var main_scenne = "res://scennes/levels/Main.tscn"
