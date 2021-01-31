@@ -25,7 +25,7 @@ func create_chain(angle):
 	if (direction == 0):
 		angle = angle * -1
 	
-	if $Chain/ChainLinks:
+	if is_inside_tree() && $Chain/ChainLinks :
 		while $Chain/ChainLinks.get_child_count() <= chain_link_count:
 			$Chain/ChainLinks.add_child(chain_link.instance())
 			
@@ -38,7 +38,7 @@ func create_chain(angle):
 		
 func set_chain_link_count(value):
 	chain_link_count = value
-	if $Chain/ChainLinks:
+	if is_inside_tree() && $Chain/ChainLinks:
 		for chain_link in $Chain/ChainLinks.get_children():
 			chain_link.queue_free()
 	

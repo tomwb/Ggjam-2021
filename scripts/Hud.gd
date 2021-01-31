@@ -5,6 +5,9 @@ var text_title = ''
 signal write_text_finished
 signal fade_finished
 signal evolve_finished
+signal catch_all_letters
+
+var total_letters = 0
 
 var evolve_memories = [
 	"res://sprites/memory/memorias1.png",
@@ -51,15 +54,17 @@ func setMainFormat():
 	$TextModal/LabelTimer.stop()
 	$BtnClose.visible = false
 	$HudName.visible = false
+	clear_letter() 
 	
-func setLevelFormat():
+func setPhaseFormat():
 	$Evolve.visible = false
 	$BtnClose.visible = true
+	$HudName.visible = false
 	text = []
 	text_title = ''
+	total_letters = 0
+	clear_letter()
 
-func setPhaseFormat():
-	$BtnClose.visible = true;
 	
 func fade(type):
 	$Fade/AnimationFade.play(type)
@@ -83,5 +88,33 @@ func evolve(phase, text):
 	showTextModal('finish', text)
 	$Evolve.visible = true
 	$Evolve/AnimatedSprite.play(phase)
-	
 
+func clear_letter():
+	for letter in $HudName.get_children():
+		letter.frame = 7
+		
+func set_letter(value):
+	var frame = 7
+	if value == "a":
+		frame = 0
+	elif  value == "u":
+		frame = 1
+	elif  value == "g":
+		frame = 2
+	elif  value == "uu":
+		frame = 3
+	elif  value == "s":
+		frame = 4
+	elif  value == "t":
+		frame = 5
+	elif  value == "e":
+		frame = 6
+	
+	$HudName.visible = true
+	if $HudName.get_child(frame) :
+		total_letters += 1
+		$HudName.get_child(frame).frame = frame
+		
+	if total_letters == 7:
+		emit_signal("catch_all_letters")
+		

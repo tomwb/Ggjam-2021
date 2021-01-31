@@ -6,7 +6,7 @@ var is_active = true
 var people = [
 	{
 		sprite = "res://sprites/phase4/level4_people2_1.png",
-		text= ["Hey Neighbor !!! I was worried about you! Glad you are recovering the memories!"]
+		text= ["Hey neighbor !!! I was worried about you! Glad you are recovering the memories!"]
 	},
 	{
 		sprite = "res://sprites/phase4/level4_people2_2.png",
@@ -51,3 +51,5 @@ func _on_Person_area_entered(area):
 	if is_active && person <= people.size(): 
 		HUD.showTextModal('person', people[person].text)
 		is_active = false
+		
+		

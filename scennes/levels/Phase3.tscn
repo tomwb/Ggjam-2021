@@ -137,7 +137,7 @@ position = Vector2( 543.381, 155.276 )
 position = Vector2( 1309.81, 923.588 )
 
 [node name="PlayerPhase3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 590.803, 203.109 )
+position = Vector2( 2556.28, 2580.2 )
 
 [node name="Camera2D" type="Camera2D" parent="PlayerPhase3"]
 position = Vector2( 0, -80 )
@@ -479,7 +479,7 @@ position = Vector2( 557.37, 371.58 )
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CallTextArea"]
-position = Vector2( -9.6907, 0.7818 )
+position = Vector2( -10.6907, 1.7818 )
 shape = SubResource( 4 )
 [connection signal="is_off_pressed" from="ButtonEvent" to="EnemiesWall" method="_on_ButtonEvent_is_off_pressed"]
 [connection signal="area_entered" from="CallTextArea" to="PlayerPhase3" method="_on_CallTextArea_area_entered"]
