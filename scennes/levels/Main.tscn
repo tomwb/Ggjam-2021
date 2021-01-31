@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/BtnPhaseSelector.gd" type="Script" id=1]
 [ext_resource path="res://musics/Indian-Ocean-Twilight_Looping.ogg" type="AudioStream" id=2]
 [ext_resource path="res://sprites/squareWhite.png" type="Texture" id=4]
 
+[sub_resource type="GDScript" id=1]
+resource_name = "Main"
+script/source = "extends Node
+
+func _ready():
+	HUD.fade(\"fadeout\")
+"
+
 [node name="Main" type="Node"]
+script = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

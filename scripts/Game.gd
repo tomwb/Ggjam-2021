@@ -16,6 +16,8 @@ func changeScenne(index):
 	HUD.setPhaseFormat()
 	if all_scennes.size() > index:
 		get_tree().change_scene(all_scennes[index])
+		HUD.fade("fadeoutblack")
+		HUD.setLevelFormat()
 	
 func changeScenneMain():
 	get_tree().change_scene(main_scenne)

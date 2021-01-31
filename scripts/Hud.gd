@@ -3,6 +3,8 @@ extends CanvasLayer
 var text = []
 var text_title = ''
 signal write_text_finished
+signal fade_finished
+signal evolve_finished
 
 func _ready():
 	setMainFormat()
@@ -27,6 +29,7 @@ func changeText():
 		GAME.game_time = 1
 		$TextModal.visible = false
 		emit_signal("write_text_finished", text_title)
+		
 
 func _on_LabelTimer_timeout():
 	changeText()
@@ -35,11 +38,30 @@ func _on_BtnClose_pressed():
 	GAME.changeScenneMain()
 	
 func setMainFormat():
+	$Evolve.visible = false
 	$TextModal.visible = false
 	$TextModal/LabelTimer.stop()
-	$BtnClose.visible = false;
+	$BtnClose.visible
+	
+func setLevelFormat():
+	$Evolve.visible = false
+	$BtnClose.visible = true
 	text = []
 	text_title = ''
 
 func setPhaseFormat():
 	$BtnClose.visible = true;
+	
+func fade(type):
+	$Fade/AnimationFade.play(type)
+	yield($Fade/AnimationFade,"animation_finished")
+	emit_signal("fade_finished")
+	
+func evolve(phase, text):
+	fade("fadeinblack")
+	yield($Fade/AnimationFade,"animation_finished")
+	showTextModal('finish', text)
+	$Evolve.visible = true
+	$Evolve/AnimatedSprite.play(phase)
+	
+

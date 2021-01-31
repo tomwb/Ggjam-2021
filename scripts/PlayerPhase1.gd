@@ -25,24 +25,24 @@ func animations(_direction):
 
 func _on_CollectorArea2D_area_entered(area):
 	if area.is_in_group("MemoryItem") :
+		area.connect("collected_animation_finished", self, "_on_finished")
 		area.destroy()
-		$AnimatedSprite.play("evolve")
-		$AnimationLightMask.play("finish")
 		status = EVOLVE
-		HUD.showTextModal('finish', [
-			"I...I...Remember!!!",
-			"I Am a person!!!",
-			"This is my Childhood!!",
-			"I need to go deeper…"
-		])
 
-func _on_write_text_finished(title):
-	if title == 'finish':
-		GAME.set_phase(1)
+func _on_finished():
+	HUD.evolve("phase1", [
+		"I...I...Remember!!!",
+		"I Am a person!!!",
+		"This is my Childhood!!",
+		"I need to go deeper…"
+	])
+	yield(get_tree().create_timer(10), "timeout")
+	GAME.set_phase(1)
 		
 func _on_TimerMidleText_timeout():
-	HUD.showTextModal('midle', [
-		"This place... is Familiar…",
-		"I have to get out here",
-		"I need to find my way…"
-	])
+	if status == WALK || status == IDLE:
+		HUD.showTextModal('midle', [
+			"This place... is Familiar…",
+			"I have to get out here",
+			"I need to find my way…"
+		])
